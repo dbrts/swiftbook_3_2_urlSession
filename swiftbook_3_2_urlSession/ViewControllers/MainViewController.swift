@@ -34,8 +34,9 @@ class MainViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var temperatureLabel: UILabel!
     
-    let url = "https://thiscatdoesnotexist.com"
+    let catUrl = "https://thiscatdoesnotexist.com"
     let weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=43.2340992&longitude=76.8868352&current_weather=true"
     
     override func viewDidLoad() {
@@ -55,7 +56,7 @@ class MainViewController: UIViewController {
     }
     
     private func fetchImage() {
-        guard let url = URL(string: url) else { return }
+        guard let url = URL(string: catUrl) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, let response = response else {
@@ -84,9 +85,12 @@ class MainViewController: UIViewController {
             
             let decoder = JSONDecoder()
             do {
-                let courses = try decoder.decode(Weather.self, from: data)
-                print(courses)
+                let weather = try decoder.decode(Weather.self, from: data)
+                print(weather)
                 self?.showAlert(withStatus: .success)
+                DispatchQueue.main.async {
+                    self?.temperatureLabel.text = "temperature in Almaty \(weather.current_weather?.temperature ?? 0)"
+                }
             } catch let error {
                 self?.showAlert(withStatus: .failed)
                 print(String(describing: error))

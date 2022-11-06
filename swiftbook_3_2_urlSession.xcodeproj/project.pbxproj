@@ -58,16 +58,48 @@
 		AC9D8FB4291791B600F2A9CE /* swiftbook_3_2_urlSession */ = {
 			isa = PBXGroup;
 			children = (
-				AC9D8FB5291791B600F2A9CE /* AppDelegate.swift */,
-				AC9D8FB7291791B600F2A9CE /* SceneDelegate.swift */,
-				AC9D8FB9291791B600F2A9CE /* MainViewController.swift */,
-				AC9D8FBB291791B600F2A9CE /* Main.storyboard */,
-				AC9D8FC92917994700F2A9CE /* Weather.swift */,
+				AC9D8FCD2917A2F200F2A9CE /* App */,
+				AC9D8FCB2917A2D400F2A9CE /* ViewControllers */,
+				AC9D8FCC2917A2DD00F2A9CE /* Storyboards */,
+				AC9D8FCE2917A30B00F2A9CE /* Models */,
 				AC9D8FBE291791B900F2A9CE /* Assets.xcassets */,
-				AC9D8FC0291791B900F2A9CE /* LaunchScreen.storyboard */,
-				AC9D8FC3291791B900F2A9CE /* Info.plist */,
 			);
 			path = swiftbook_3_2_urlSession;
+			sourceTree = "<group>";
+		};
+		AC9D8FCB2917A2D400F2A9CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8FB9291791B600F2A9CE /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AC9D8FCC2917A2DD00F2A9CE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8FBB291791B600F2A9CE /* Main.storyboard */,
+				AC9D8FC0291791B900F2A9CE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AC9D8FCD2917A2F200F2A9CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8FB5291791B600F2A9CE /* AppDelegate.swift */,
+				AC9D8FB7291791B600F2A9CE /* SceneDelegate.swift */,
+				AC9D8FC3291791B900F2A9CE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AC9D8FCE2917A30B00F2A9CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC9D8FC92917994700F2A9CE /* Weather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S8M54JQ35A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = swiftbook_3_2_urlSession/Info.plist;
+				INFOPLIST_FILE = swiftbook_3_2_urlSession/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +356,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S8M54JQ35A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = swiftbook_3_2_urlSession/Info.plist;
+				INFOPLIST_FILE = swiftbook_3_2_urlSession/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

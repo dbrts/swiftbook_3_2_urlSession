@@ -41,6 +41,12 @@
                                     <action selector="showJsonButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2l-aG-dJ0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperature in Almaty: nil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkY-AH-wl5">
+                                <rect key="frame" x="90.333333333333329" y="564" width="194.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,9 +57,11 @@
                             <constraint firstItem="P1S-q7-fhb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="6dP-hL-mib"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P1S-q7-fhb" secondAttribute="trailing" constant="16" id="AAC-YC-lSj"/>
                             <constraint firstItem="erB-Hf-n9g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AId-hw-Odr"/>
+                            <constraint firstItem="wkY-AH-wl5" firstAttribute="top" secondItem="erB-Hf-n9g" secondAttribute="bottom" constant="32" id="FIV-Id-ea3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VCw-2r-Wti" secondAttribute="trailing" constant="16" id="GEb-hG-mgt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="erB-Hf-n9g" secondAttribute="trailing" constant="16" id="UL5-Fi-OFA"/>
                             <constraint firstItem="h3K-Db-X5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRB-l4-92O"/>
+                            <constraint firstItem="wkY-AH-wl5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mdh-hq-Kdy"/>
                             <constraint firstItem="erB-Hf-n9g" firstAttribute="top" secondItem="VCw-2r-Wti" secondAttribute="bottom" constant="8" symbolic="YES" id="qzM-w7-zkM"/>
                             <constraint firstItem="VCw-2r-Wti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ysP-B5-fku"/>
                         </constraints>
@@ -61,6 +69,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="h3K-Db-X5w" id="Ths-Pf-3ZB"/>
                         <outlet property="imageView" destination="P1S-q7-fhb" id="YMo-uA-bdy"/>
+                        <outlet property="temperatureLabel" destination="wkY-AH-wl5" id="nQg-ED-KuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
