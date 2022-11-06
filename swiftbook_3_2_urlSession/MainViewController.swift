@@ -84,22 +84,22 @@ class MainViewController: UIViewController {
             
             let decoder = JSONDecoder()
             do {
-                let courses = try decoder.decode([Weather].self, from: data)
+                let courses = try decoder.decode(Weather.self, from: data)
                 print(courses)
                 self?.showAlert(withStatus: .success)
             } catch let error {
                 self?.showAlert(withStatus: .failed)
-                print(error.localizedDescription)
+                print(String(describing: error))
             }
             
         }.resume()
     }
     
     private func showAlert(withStatus status: Alert) {
-        let alert = UIAlertController(title: status.title, message: status.message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
         DispatchQueue.main.async { [unowned self] in
+            let alert = UIAlertController(title: status.title, message: status.message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
             present(alert, animated: true)
         }
     }

@@ -6,27 +6,17 @@
 //
 
 // MARK: - Weather
-struct Weather: Codable {
-    let latitude, longitude, generationtimeMS: Double
-    let utcOffsetSeconds: Int
-    let timezone, timezoneAbbreviation: String
-    let elevation: Int
-    let currentWeather: CurrentWeather
-
-    enum CodingKeys: String, CodingKey {
-        case latitude, longitude
-        case generationtimeMS
-        case utcOffsetSeconds
-        case timezone
-        case timezoneAbbreviation
-        case elevation
-        case currentWeather
-    }
+struct Weather: Decodable {
+    let latitude, longitude, generationtime_ms: Double?
+    let utc_offset_seconds: Int?
+    let timezone, timezone_abbreviation: String?
+    let elevation: Int?
+    let current_weather: CurrentWeather?
 }
 
 // MARK: - CurrentWeather
-struct CurrentWeather: Codable {
-    let temperature, windspeed: Double
-    let winddirection, weathercode: Int
-    let time: String
+struct CurrentWeather: Decodable {
+    let temperature, windspeed: Double?
+    let winddirection, weathercode: Int?
+    let time: String?
 }
